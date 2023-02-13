@@ -16,10 +16,10 @@ args.seq = args.seq.upper()                 # Seq in upper letters
 
 if re.search('^[ACGTU]+$', args.seq):
     if "U" in args.seq and "T" not in args.seq:
-        print ('The sequence is RNA') #If  it has a U, it is RNA
+        print ('The sequence is RNA') #If  it has a U and not T, it is RNA
     elif "U" in args.seq and "T" in args.seq:
         print ('You have mixed DNA and RNA') #If it has  U and T it is a mix
     else:
-        print ('The sequence is DNA')
+        print ('The sequence is DNA') #If it has not U but ACGT, it is DNA
 else:
     print ('The sequence is not DNA nor RNA!')
